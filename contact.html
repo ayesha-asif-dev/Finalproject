@@ -1,63 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuideMate | Home</title>
-    <!-- CSS   -->
-    <link rel="stylesheet" href="/style.css">
-       <link rel="stylesheet" href="/navbar.css">
-<!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">    
-   <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
-</head>
-<body>
-    
-     <!-- ===== NAV BAR ===== -->
-    <header class="main-nav">
-    <div class="container">
-        <a href="#" class="nav-logo">
-            Guide<span>Mate</span>
-        </a>
-        <nav>
-            <ul class="nav-links">
-                <li>
-                    <a href="/HTML/home.html" >
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="/HTML/about.html" >
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="/HTML/explore.html" >
-                        Explore
-                    </a>
-                </li>
-                <li>
-                    <a href="/HTML/contact.html" >
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</header>
-       <!-- back to top -->
-<a href="#top " class="back-to-top">↑</a>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title> Contact Us</title>
@@ -74,14 +17,14 @@
       <p class="subtitle">Tell us where you're headed and we'll take care of the rest.</p>
     </header>
 
-    <form id="myForm" class="form" novalidate>
+    <form id="myForm" class="form" >
 
       <!-- Traveller details -->
       <div class="form-grid">
 
         <div class="field">
           <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" name="fullName" placeholder="e.g. Ayesha Khan">
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your Name ...">
           <span class="error-msg" id="err-fullName"></span>
         </div>
 
@@ -100,7 +43,7 @@
         <div class="field">
           <label for="transport">Mode of Transport</label>
           <select id="transport" name="transport">
-            <option value="">Select transport</option>
+            <option value="" selected disabled>Select transport</option>
             <option value="Flight">Flight</option>
             <option value="Train">Train</option>
             <option value="Bus">Bus</option>
@@ -112,7 +55,7 @@
         <div class="field">
           <label for="from">From</label>
           <select id="from" name="from">
-            <option value="">Select starting point</option>
+            <option value="" selected disabled>Select starting point</option>
             <option value="Karachi">Karachi</option>
             <option value="Lahore">Lahore</option>
             <option value="Islamabad">Islamabad</option>
@@ -125,12 +68,12 @@
         <div class="field">
           <label for="to">To</label>
           <select id="to" name="to">
-            <option value="">Select destination</option>
+            <option value="" selected disabled>Select destination</option>
             <option value="Hunza">Hunza</option>
             <option value="Skardu">Skardu</option>
             <option value="Murree">Murree</option>
             <option value="Gilgit">Gilgit</option>
-            <option value="Naran Kaghan">Naran Kaghan</option>
+            <option value="Naran Kaghan">Peshawar</option>
             <option value="Gawadar">Gawadar</option>
             <option value="Chitral">Chitral</option>
 
@@ -146,7 +89,7 @@
 
         <div class="field">
           <label for="budget">Budget (PKR)</label>
-          <input type="number" id="budget" name="budget" min="1" placeholder="e.g. 50000">
+          <input type="number" id="budget" name="budget" min="1" placeholder="Enter Budget for a Day">
           <span class="error-msg" id="err-budget"></span>
         </div>
 
@@ -170,42 +113,28 @@
       <button type="reset" id="resetBtn" class="btn btn-primary">Reset</button>
      </div>
 
-      <p id="formStatus" class="form-status"></p>
 
     </form>
 
   </div>
 
-  <!-- Preview / Confirmation Modal -->
-  <div id="previewModal" class="modal-overlay">
-    <div class="modal-box">
-      <h2>Your Trip Summary</h2>
+
+  <!-- Modal -->
+  <div id="previewModal" class="modal">
+    <div class="modal-content">
+      <h3>Your Trip Summary</h3>
       <ul id="previewList" class="preview-list"></ul>
-      <button type="button" id="closeModal" class="btn btn-primary">Got it</button>
+      <button type="button" id="closeModal" class="btn-close">Close</button>
     </div>
   </div>
 
 
 
-
   <!-- jQuery CDN -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- jquery input validation link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 <script src="contact.js"></script>
 
-<!-- jQuery Validation Plugin CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 </body>
-</html>
-
-
-
-                    <!-- Footer -->
-
-    <!-- Swiper JS -->
-     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script src="/navbar.js"></script> 
-<script src="/script.js"></script>
-   <!-- <script src="/navbar.js"></script> -->
-    </body>
 </html>
