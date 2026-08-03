@@ -1621,7 +1621,29 @@ h3:hover{
 
 
 
+
 /* contact page starts */
+
+
+:root {
+  --accent: #c89b3c;
+  --color-primary: #1f5747;
+  --text: #1f2937;
+  --bg: #faf9f6;
+  --white: #ffffff;
+  --error: #dc2626;
+}
+
+.contact-bg{
+    background-image: url('IMAGES/bgimg1.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* min-height: 100vh; */
+    /* width: 100%; */
+    margin: 0;
+}
 
 .contact-page{
   max-width: 780px;
@@ -1808,6 +1830,5 @@ h3:hover{
     .preview-list li strong { 
       color: #C89B3C; 
     }
-
-
-    /* contact ayesha end  */
+     
+    /* contact end  */

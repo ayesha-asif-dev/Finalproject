@@ -24,7 +24,7 @@ $(document).ready(function () {
       from: { required: true },
       to: { required: true, differentFrom: '#from' },
       days: { required: true, min: 1, max: 30 },
-      budget: { required: true, min: 4000},
+      budget: { required: true, min: 500},
       tripDate: { required: true },
       tripTime: { required: true }
     },
