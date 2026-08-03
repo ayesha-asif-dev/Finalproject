@@ -6,7 +6,6 @@
     <title>GuideMate | Home</title>
     <!-- CSS   -->
     <link rel="stylesheet" href="/style.css">
-       <link rel="stylesheet" href="/navbar.css">
 <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">    
    <!-- Swiper CSS -->
@@ -55,156 +54,59 @@
        <!-- back to top -->
 <a href="#top " class="back-to-top">↑</a>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Contact Us</title>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <div class="contact-page">
-
-    <header class="form-header">
-      <span class="my-con">Contact Us</span>
-      <h1>Plan your Trip</h1>
-      <p class="subtitle">Tell us where you're headed and we'll take care of the rest.</p>
-    </header>
-
-    <form id="myForm" class="form" novalidate>
-
-      <!-- Traveller details -->
-      <div class="form-grid">
-
-        <div class="field">
-          <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" name="fullName" placeholder="e.g. Ayesha Khan">
-          <span class="error-msg" id="err-fullName"></span>
-        </div>
-
-        <div class="field">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com">
-          <span class="error-msg" id="err-email"></span>
-        </div>
-
-        <div class="field">
-          <label for="contactNo">Contact Number</label>
-          <input type="tel" id="contactNo" name="contactNo" placeholder="03XXXXXXXXX">
-          <span class="error-msg" id="err-contactNo"></span>
-        </div>
-
-        <div class="field">
-          <label for="transport">Mode of Transport</label>
-          <select id="transport" name="transport">
-            <option value="">Select transport</option>
-            <option value="Flight">Flight</option>
-            <option value="Train">Train</option>
-            <option value="Bus">Bus</option>
-            <option value="Car">Private Car</option>
-          </select>
-          <span class="error-msg" id="err-msg"></span>
-        </div>
-
-        <div class="field">
-          <label for="from">From</label>
-          <select id="from" name="from">
-            <option value="">Select starting point</option>
-            <option value="Karachi">Karachi</option>
-            <option value="Lahore">Lahore</option>
-            <option value="Islamabad">Islamabad</option>
-            <option value="Peshawar">Murree</option>
-            <option value="Quetta">Quetta</option>
-          </select>
-          <span class="error-msg" id="err-from"></span>
-        </div>
-
-        <div class="field">
-          <label for="to">To</label>
-          <select id="to" name="to">
-            <option value="">Select destination</option>
-            <option value="Hunza">Hunza</option>
-            <option value="Skardu">Skardu</option>
-            <option value="Murree">Murree</option>
-            <option value="Gilgit">Gilgit</option>
-            <option value="Naran Kaghan">Naran Kaghan</option>
-            <option value="Gawadar">Gawadar</option>
-            <option value="Chitral">Chitral</option>
-
-          </select>
-          <span class="error-msg" id="err-to"></span>
-        </div>
-
-        <div class="field">
-          <label for="days">Number of Days</label>
-          <input type="number" id="days" name="days" min="1" max="60" placeholder="e.g. 5">
-          <span class="error-msg" id="err-days"></span>
-        </div>
-
-        <div class="field">
-          <label for="budget">Budget (PKR)</label>
-          <input type="number" id="budget" name="budget" min="1" placeholder="e.g. 50000">
-          <span class="error-msg" id="err-budget"></span>
-        </div>
-
-        <div class="field">
-          <label for="tripDate">Departure Date</label>
-          <input type="date" id="tripDate" name="tripDate">
-          <span class="error-msg" id="err-tripDate"></span>
-        </div>
-
-        <div class="field">
-          <label for="tripTime">Departure Time</label>
-          <input type="time" id="tripTime" name="tripTime">
-          <span class="error-msg" id="err-tripTime"></span>
-        </div>
-
-      </div>
-
-     <div class="form-actions">
-       <button type="button" id="previewBtn" class="btn btn-primary">Preview Trip</button>
-       <button type="submit" class="btn btn-primary">Submit</button>
-      <button type="reset" id="resetBtn" class="btn btn-primary">Reset</button>
-     </div>
-
-      <p id="formStatus" class="form-status"></p>
-
-    </form>
-
-  </div>
-
-  <!-- Preview / Confirmation Modal -->
-  <div id="previewModal" class="modal-overlay">
-    <div class="modal-box">
-      <h2>Your Trip Summary</h2>
-      <ul id="previewList" class="preview-list"></ul>
-      <button type="button" id="closeModal" class="btn btn-primary">Got it</button>
-    </div>
-  </div>
-
-
-
-
-  <!-- jQuery CDN -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="contact.js"></script>
-
-<!-- jQuery Validation Plugin CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-</body>
-</html>
 
 
 
                     <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h2>Explore</h2>
+            <p>
+                Discover breathtaking destinations, unforgettable adventures,
+                and experiences that bring you closer to nature.
+            </p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://pk.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="/HTML/home.html">Home</a>
+            <a href="/HTML/about.html">About</a>
+            <a href="/HTML/explore.html">Explore</a>
+            <a href="/HTML/contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+            <h3>Services</h3>
+            <a href="/HTML/explore.html">Best Restaurant</a>
+            <a href="/HTML/explore.html">Top Hotels</a>
+          <a href="/HTML/explore.html">Best Place to visit</a>
+        </div>
+        <div class="footer-news">
+            <h3>Newsletter</h3>
+            <p>Subscribe to receive travel updates.</p>
+            <form>
+                <input type="email" placeholder="Email Address">
+                <button>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>
+            &copy; 2023 GUIDE MATE. All Rights Reserved.
+        </p>
+    </div>
+</footer>
 
     <!-- Swiper JS -->
      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script src="/navbar.js"></script> 
 <script src="/script.js"></script>
    <!-- <script src="/navbar.js"></script> -->
     </body>
