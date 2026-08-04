@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuideMate | EXPLORE</title>
+    <!-- GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <!-- CSS   -->
     <link rel="stylesheet" href="../style.css">
 <!-- Font Awesome -->
@@ -13,7 +15,10 @@
 
 </head>
 <body>
-    
+
+           <!-- back to top -->
+<a href="#top " class="back-to-top">↑</a>
+
      <!-- ===== NAV BAR ===== -->
     <header class="main-nav">
     <div class="container">
@@ -23,22 +28,22 @@
         <nav>
             <ul class="nav-links">
                 <li>
-                    <a href="/HTML/home.html" >
+                    <a href="home.html" >
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="/HTML/about.html" >
+                    <a href="about.html" >
                         About
                     </a>
                 </li>
                 <li>
-                    <a href="/HTML/explore.html" >
+                    <a href="explore.html" >
                         Explore
                     </a>
                 </li>
                 <li>
-                    <a href="/HTML/contact.html" >
+                    <a href="contact.html" >
                         Contact
                     </a>
                 </li>
@@ -51,8 +56,28 @@
         </div>
     </div>
 </header>
-       <!-- back to top -->
-<a href="#top " class="back-to-top">↑</a>
+
+<!-- Section Header -->
+    <section class="explore-header">
+        <span class="sub-heading">Discover Pakistan</span>
+        <h1>Uncover Extraordinary Places</h1>
+        <p>Explore iconic cities, luxury stays, local culinary highlights, and famous landmarks.</p>
+    </section>
+
+    <!-- Cards Grid  -->
+    <section class="explore-container">
+        <div id="cardsGrid" class="cards-grid">
+        </div>
+    </section>
+
+    <!-- explore  Modal -->
+    <div id="detailModal" class="explore-modal">
+        <div class="explore-modal-content">
+            <button type="button" id="closeExploreModal" class="modal-close-btn">&times;</button>
+            <div id="modalBody">
+            </div>
+        </div>
+    </div>
 
 
 
@@ -75,16 +100,16 @@
         </div>
         <div class="footer-links">
             <h3>Quick Links</h3>
-            <a href="/HTML/home.html">Home</a>
-            <a href="/HTML/about.html">About</a>
-            <a href="/HTML/explore.html">Explore</a>
-            <a href="/HTML/contact.html">Contact</a>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="explore.html">Explore</a>
+            <a href="contact.html">Contact</a>
         </div>
         <div class="footer-links">
             <h3>Services</h3>
-            <a href="/HTML/explore.html">Best Restaurant</a>
-            <a href="/HTML/explore.html">Top Hotels</a>
-          <a href="/HTML/explore.html">Best Place to visit</a>
+            <a href="explore.html">Best Restaurant</a>
+            <a href="explore.html">Top Hotels</a>
+          <a href="explore.html">Best Place to visit</a>
         </div>
         <div class="footer-news">
             <h3>Newsletter</h3>
@@ -104,10 +129,8 @@
     </div>
 </footer>
 
-    <!-- Swiper JS -->
+    <!--  Jquery CDN  -->
      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="../scripts.js"></script>
-   <!-- <script src="/navbar.js"></script> -->
+   <script src="../scripts.js"></script>
     </body>
 </html>

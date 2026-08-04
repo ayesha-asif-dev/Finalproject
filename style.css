@@ -2121,3 +2121,190 @@ h3:hover{
     }
      
     /* contact end  */
+
+
+   /* EXPLORE START */
+  
+.explore-header {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+.sub-heading {
+    color: var(--accent, #C89B3C );
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.explore-header h1 {
+    color: var(--color-primary, #1f5747);
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.city-card {
+    background: var(--bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.city-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.city-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.city-card-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.city-card-info h3 {
+    color: var(--color-primary, #1f5747);
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.city-card-info p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+/* MODAL for EXPLORE  */
+.explore-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.explore-modal.open {
+    display: flex;
+}
+
+/*  modal container with max height and scroll */
+.explore-modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 950px; 
+    max-height: 85vh; 
+    border-radius: 14px;
+    position: relative;
+    padding: 30px;
+    overflow-y: auto; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.modal-header-banner {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.modal-header-banner h2 {
+    color: var(--color-primary, #1f5747);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.modal-banner-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Modal Sections Grid */
+.modal-section-title {
+    color: var(--accent, #c89b3c);
+    border-bottom: 2px solid var(--color-primary, #1f5747);
+    padding-bottom: 6px;
+    margin: 30px 0 15px 0;
+    font-size: 20px;
+}
+
+.modal-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .modal-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.modal-item-card {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.modal-item-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.modal-item-card h4 {
+    color: var(--color-primary, #1f5747);
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+.modal-item-card p {
+    font-size: 13px;
+    color: #666;
+}
+
+.modal-item-card .price-tag {
+    color: var(--accent, #c89b3c);
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 4px;
+}
