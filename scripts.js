@@ -181,38 +181,40 @@ $(document).ready(function () {
 
 
   //  EXPLORE PAGE 
-  const citiesData = [
-    {
-      id: 1,
-      cityName: "Lahore",
-      tagline: "The Heart of Culture & Cuisine",
-      cardImg: "../IMAGES/lahore-card.jpg",
-      modalImg: "../IMAGES/lahore-banner.jpg",
-      hotels: [
-        { name: "Pearl Continental (PC)", price: "PKR 35,000 / night", img: "../IMAGES/pc-lahore.jpg" },
-        { name: "Nishat Hotel Johar Town", price: "PKR 28,000 / night", img: "../IMAGES/nishat-lahore.jpg" },
-        { name: "Avari Lahore", price: "PKR 30,000 / night", img: "../IMAGES/avari-lahore.jpg" }
-      ],
-      restaurants: [
-        { name: "Haveli Restaurant", detail: "Traditional Desi Food", img: "../IMAGES/haveli.jpg" },
-        { name: "Howdy Burgers", detail: "Gourmet Fast Food", img: "../IMAGES/howdy.jpg" },
-        { name: "Monal Lahore", detail: "Buffet & Continental", img: "../IMAGES/monal.jpg" }
-      ],
-      places: [
-        { name: "Badshahi Mosque", detail: "Mughal Architecture", img: "../IMAGES/badshahi.jpg" },
-        { name: "Lahore Fort (Shahi Qila)", detail: "Historical Monument", img: "../IMAGES/shahi-qila.jpg" },
-        { name: "Shalimar Gardens", detail: "Mughal Garden Complex", img: "../IMAGES/shalimar.jpg" }
-      ]
-    }
-  ];
+  // const citiesData = [
+  //   {
+  //     id: 1,
+  //     cityName: "Lahore",
+  //     tagline: "The Heart of Culture & Cuisine",
+  //     cardImg: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png",
+  //     modalImg: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png",
+  //     hotels: [
+  //       { name: "Pearl Continental (PC)", price: "PKR 35,000 / night", img: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png" },
+  //       { name: "Nishat Hotel Johar Town", price: "PKR 28,000 / night", img: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png" },
+  //       { name: "Avari Lahore", price: "PKR 30,000 / night", img: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png" }
+  //     ],
+  //     restaurants: [
+  //       { name: "Haveli Restaurant", detail: "Traditional Desi Food", img: "../IMAGES/haveli.jpg" },
+  //       { name: "Howdy Burgers", detail: "Gourmet Fast Food", img: "../IMAGES/howdy.jpg" },
+  //       { name: "Monal Lahore", detail: "Buffet & Continental", img: "../IMAGES/monal.jpg" }
+  //     ],
+  //     places: [
+  //       { name: "Badshahi Mosque", detail: "Mughal Architecture", img: "../IMAGES/badshahi.jpg" },
+  //       { name: "Lahore Fort (Shahi Qila)", detail: "Historical Monument", img: "../IMAGES/shahi-qila.jpg" },
+  //       { name: "Shalimar Gardens", detail: "Mughal Garden Complex", img: "../IMAGES/shalimar.jpg" }
+  //     ]
+  //   }
+  // ];
 
   const cardsGrid = $('#cardsGrid');
 
   if (cardsGrid.length) {
     $.each(citiesData, function (index, city) {
       const cardHtml = `
-        <div class="city-card">
-          <img src="${city.cardImg}" alt="${city.cityName}">
+        <div class="city-card" >
+              <img src="${city.cardImg}" alt="${city.cityName}">    
+    
+     
           <div class="city-card-info">
             <h3>${city.cityName}</h3>
             <p>${city.tagline}</p>
@@ -239,7 +241,11 @@ $(document).ready(function () {
       $.each(selectedCity.hotels, function (i, item) {
         hotelsHtml += `
           <div class="modal-item-card">
-            <img src="${item.img}" alt="${item.name}">
+   <a href="${item.img}" data-fancybox="hotels" data-caption="${item.name}">
+        <img src="${item.img}" alt="${item.name}">
+      </a>
+
+            
             <h4>${item.name}</h4>
             <div class="price-tag">${item.price}</div>
           </div>
@@ -298,8 +304,11 @@ $(document).ready(function () {
       exploreModal.removeClass('open');
     }
   });
+  Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
+// explore end 
 
-  // EXPLORE END 
 
 });
 
