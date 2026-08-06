@@ -125,9 +125,9 @@ $(document).ready(function () {
 
     // Estimated Hours for TRANSPORT Calculation
     function getEstHours(transport) {
-      if (transport === 'Flight') return '2 - 3 hrs';
-      if (transport === 'Train') return '12 - 18 hrs';
-      if (transport === 'Car') return '8 - 10 hrs';
+      if (transport === 'Flight') { return '2 - 3 hrs'; }
+      if (transport === 'Train') { return '12 - 18 hrs'; }
+      if (transport === 'Car') { return '8 - 10 hrs'; }
       return '10 - 14 hrs';
     }
 
@@ -137,17 +137,17 @@ $(document).ready(function () {
       const dailyBudget = Number($('#budget').val()) || 0;
       const transport = $('#transport').val();
 
-     const tripSummary = {
-       "Name": $('#fullName').val(),
-       "Route": `${$('#from').val()} → ${$('#to').val()}`,
-       "Transport": transport,
-       "Est. Travel Time": getEstHours(transport),
-       "Duration": `${days} Days`,
-      "Departure": `${$('#tripDate').val()} at ${$('#tripTime').val()}`,
-      "Total Budget": `PKR ${(days * dailyBudget).toLocaleString()}`
-};
+      const tripSummary = {
+        "Name": $('#fullName').val(),
+        "Route": `${$('#from').val()} → ${$('#to').val()}`,
+        "Transport": transport,
+        "Est. Travel Time": getEstHours(transport),
+        "Duration": `${days} Days`,
+        "Departure": `${$('#tripDate').val()} at ${$('#tripTime').val()}`,
+        "Total Budget": `PKR ${(days * dailyBudget).toLocaleString()}`
+      };
 
-       previewList.empty();
+      previewList.empty();
       $.each(tripSummary, function (key, value) {
         previewList.append(`<li><span>${key}:</span> <strong>${value}</strong></li>`);
       });
@@ -179,14 +179,14 @@ $(document).ready(function () {
       $('.error-msg').empty();
     });
 
-  }  
+  }
 
   // EXPLORE PAGE STARTED
-const cardsGrid = $('#cardsGrid');
+  const cardsGrid = $('#cardsGrid');
 
-if (cardsGrid.length) {
-  $.each(citiesData, function (index, city) {
-    const cardHtml = `
+  if (cardsGrid.length) {
+    $.each(citiesData, function (index, city) {
+      const cardHtml = `
       <div class="city-card">
         <img src="${city.cardImg}" alt="${city.cityName}">
         <div class="city-card-info">
@@ -198,24 +198,24 @@ if (cardsGrid.length) {
         </div>
       </div>
     `;
-    cardsGrid.append(cardHtml);
-  });
-}
+      cardsGrid.append(cardHtml);
+    });
+  }
 
-// EXPLORE MODAL 
-const exploreModal = $('#detailModal');
-const modalBody = $('#modalBody');
+  // EXPLORE MODAL 
+  const exploreModal = $('#detailModal');
+  const modalBody = $('#modalBody');
 
-$(document).on('click', '.view-details-btn', function () {
-  const cityId = $(this).data('id');
-  const selectedCity = citiesData.find(c => c.id === cityId);
+  $(document).on('click', '.view-details-btn', function () {
+    const cityId = $(this).data('id');
+    const selectedCity = citiesData.find(c => c.id === cityId);
 
-  if (selectedCity) {
-    const galleryGroup = `gallery-${selectedCity.id}`;
+    if (selectedCity) {
+      const galleryGroup = `gallery-${selectedCity.id}`;
 
-    let hotelsHtml = '';
-    $.each(selectedCity.hotels, function (i, item) {
-      hotelsHtml += `
+      let hotelsHtml = '';
+      $.each(selectedCity.hotels, function (i, item) {
+        hotelsHtml += `
         <div class="modal-item-card">
           <a href="${item.img}" data-fancybox="${galleryGroup}" data-caption="${item.name} - ${item.price}">
             <img src="${item.img}" alt="${item.name}">
@@ -224,11 +224,11 @@ $(document).on('click', '.view-details-btn', function () {
           <div class="price-tag">${item.price}</div>
         </div>
       `;
-    });
+      });
 
-    let restHtml = '';
-    $.each(selectedCity.restaurants, function (i, item) {
-      restHtml += `
+      let restHtml = '';
+      $.each(selectedCity.restaurants, function (i, item) {
+        restHtml += `
         <div class="modal-item-card">
           <a href="${item.img}" data-fancybox="${galleryGroup}" data-caption="${item.name} - ${item.detail}">
             <img src="${item.img}" alt="${item.name}">
@@ -237,11 +237,11 @@ $(document).on('click', '.view-details-btn', function () {
           <p>${item.detail}</p>
         </div>
       `;
-    });
+      });
 
-    let placesHtml = '';
-    $.each(selectedCity.places, function (i, item) {
-      placesHtml += `
+      let placesHtml = '';
+      $.each(selectedCity.places, function (i, item) {
+        placesHtml += `
         <div class="modal-item-card">
           <a href="${item.img}" data-fancybox="${galleryGroup}" data-caption="${item.name} - ${item.detail}">
             <img src="${item.img}" alt="${item.name}">
@@ -250,9 +250,9 @@ $(document).on('click', '.view-details-btn', function () {
           <p>${item.detail}</p>
         </div>
       `;
-    });
+      });
 
-    const modalContent = `
+      const modalContent = `
       <div class="modal-header-banner">
         <h2>Explore ${selectedCity.cityName} With Us</h2>
         <div class="video-container">
@@ -277,24 +277,24 @@ $(document).on('click', '.view-details-btn', function () {
       <div class="modal-grid-3">${placesHtml}</div>
     `;
 
-    modalBody.html(modalContent);
-    exploreModal.addClass('open');
-  }
-});
+      modalBody.html(modalContent);
+      exploreModal.addClass('open');
+    }
+  });
 
-$('#closeExploreModal').on('click', function () {
-  exploreModal.removeClass('open');
-});
-
-exploreModal.on('click', function (e) {
-  if ($(e.target).is(exploreModal)) {
+  $('#closeExploreModal').on('click', function () {
     exploreModal.removeClass('open');
-  }
-});
+  });
 
-// FANCYBOX INITIALIZATION
-Fancybox.bind("[data-fancybox]", {
-});
+  exploreModal.on('click', function (e) {
+    if ($(e.target).is(exploreModal)) {
+      exploreModal.removeClass('open');
+    }
+  });
+
+  // FANCYBOX INITIALIZATION
+  Fancybox.bind("[data-fancybox]", {
+  });
 
 });
 
