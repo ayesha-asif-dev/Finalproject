@@ -2105,6 +2105,36 @@ h3:hover{
         color: #C89B3C;
         background-color: #164234;
     }
+
+
+
+    /* Responsive  */
+@media (max-width: 768px) {
+  /* Change the grid from 2 columns to 1 column */
+  .form-grid {
+    grid-template-columns: 1fr; 
+  }
+    .form {
+    padding: 24px 20px; 
+  }
+  .form-header h1 {
+    font-size: 32px;
+  }
+  .form-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
     /* Calendar Section Styling */
 .calendar-section {
   background-color: var(--white);
