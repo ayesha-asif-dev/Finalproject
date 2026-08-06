@@ -2358,3 +2358,21 @@ h3:hover{
   width: 100%;
   height: 100%;
 }
+
+    .explore-header{
+        padding-top:50px;
+        margin-top:6px;
+
+    }
+
+    .explore-banner-wrapper{
+        margin-top:0;
+    }
+
+    .explore-banner-img{
+        display:block;
+        width:100%;
+        height:auto;
+    }
+
+
