@@ -231,7 +231,7 @@ overflow:hidden;
     position:relative;
     background:
      linear-gradient(rgba(17,35,30,.45), rgba(17,35,30,.55)),
-    url("/IMAGES/footer.png") center/cover no-repeat;
+    url("../IMAGES/footer.png") center/cover no-repeat;
     color:var(--white);
     padding:90px 8% 25px;
     overflow:hidden;
@@ -1927,7 +1927,7 @@ h3:hover{
   padding: 60px 20px 80px;
 }
 .contact-bg{
-    background-image: url('IMAGES/bgimg1.avif');
+    background-image: url('../IMAGES/bgimg1.avif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -2099,6 +2099,11 @@ h3:hover{
    }
     .preview-list li strong { 
       color: var(--gold); 
+    }
+
+    .btn-close{
+        color: #C89B3C;
+        background-color: #164234;
     }
     /* Calendar Section Styling */
 .calendar-section {

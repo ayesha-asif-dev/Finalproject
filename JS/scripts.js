@@ -180,6 +180,8 @@ $(document).ready(function () {
     });
 
   }  
+
+  // EXPLORE PAGE STARTED
 const cardsGrid = $('#cardsGrid');
 
 if (cardsGrid.length) {
@@ -295,5 +297,7 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 });
+
+// Explore ended 
 
 

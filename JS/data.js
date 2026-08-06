@@ -7,7 +7,7 @@
       cardImg:"../IMAGES/Lahore.jfif",
       modalVideo: "https://www.youtube.com/embed/qP30_uKnRs4?autoplay=1&mute=1",
       hotels: [
-        { name: "Pearl Continental (PC)", price: "PKR 35,000 / night", img: "/IMAGES/pclahore.jfif" },
+        { name: "Pearl Continental (PC)", price: "PKR 35,000 / night", img: "../IMAGES/pclahore.jfif" },
         { name: "Nishat Hotel Johar Town", price: "PKR 28,000 / night", img: "../IMAGES/nishat.jfif" },
         { name: "Avari Lahore", price: "PKR 30,000 / night", img: "../IMAGES/avari.avif"}
       ],
@@ -18,7 +18,7 @@
       ],
       places: [
         { name: "Badshahi Mosque", detail: "Mughal Architecture", img:  "../IMAGES/badshahi.jpg" },
-        { name: "Lahore Fort (Shahi Qila)", detail: "Historical Monument", img:  "../IMAGES/badshahi.jpg"  },
+        { name: "Lahore Fort (Shahi Qila)", detail: "Historical Monument", img:  "../IMAGES/fortlahore.jpg"  },
         { name: "Shalimar Gardens", detail: "Mughal Garden Complex", img: "../IMAGES/shalimar.webp"  }
       ]
     }
