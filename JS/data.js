@@ -1,52 +1,25 @@
-<<<<<<< HEAD
-
-  //  EXPLORE PAGE 
-=======
   //  EXPLORE PAGE ARRAY WITH OBJECT 
->>>>>>> 819e12194952c3a55f4462a727b1b755fb9b820d
   const citiesData = [
     {
       id: 1,
       cityName: "Lahore",
       tagline: "The Heart of Culture & Cuisine",
-<<<<<<< HEAD
-      cardImg: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png",
-      modalImg: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png",
+      cardImg:"../IMAGES/Lahore.jfif",
+      modalVideo: "https://www.youtube.com/embed/qP30_uKnRs4?autoplay=1&mute=1",
       hotels: [
         { name: "Pearl Continental (PC)", price: "PKR 35,000 / night", img: "/IMAGES/pclahore.jfif" },
-        { name: "Nishat Hotel Johar Town", price: "PKR 28,000 / night", img: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png" },
-        { name: "Avari Lahore", price: "PKR 30,000 / night", img: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png" }
+        { name: "Nishat Hotel Johar Town", price: "PKR 28,000 / night", img: "../IMAGES/nishat.jfif" },
+        { name: "Avari Lahore", price: "PKR 30,000 / night", img: "../IMAGES/avari.avif"}
       ],
       restaurants: [
-        { name: "Haveli Restaurant", detail: "Traditional Desi Food", img: "../IMAGES/haveli.jpg" },
-        { name: "Howdy Burgers", detail: "Gourmet Fast Food", img: "../IMAGES/howdy.jpg" },
-        { name: "Monal Lahore", detail: "Buffet & Continental", img: "../IMAGES/monal.jpg" }
+        { name: "Haveli Restaurant", detail: "Traditional Desi Food", img:"../IMAGES/haveli.jfif"},
+        { name: "Howdy Burgers", detail: "Gourmet Fast Food", img: "../IMAGES/howdy.jfif" },
+        { name: "Monal Lahore", detail: "Buffet & Continental", img:  "../IMAGES/monal.webp"}
       ],
       places: [
-        { name: "Badshahi Mosque", detail: "Mughal Architecture", img: "../IMAGES/badshahi.jpg" },
-        { name: "Lahore Fort (Shahi Qila)", detail: "Historical Monument", img: "../IMAGES/shahi-qila.jpg" },
-        { name: "Shalimar Gardens", detail: "Mughal Garden Complex", img: "../IMAGES/shalimar.jpg" }
-      ]
-    }
-  ];
-=======
-      cardImg: "../IMAGES/Lahore.jfif",
-      modalVideo: "https://www.youtube.com/embed/oBFZWfDv2Zk?autoplay=1&mute=1",
-
-      hotels: [
-        { name: "Pearl Continental (PC)", price: "PKR 35,000 / night", img: "../IMAGES/pclahoreimg.webp" },
-        { name: "Nishat Hotel Johar Town", price: "PKR 28,000 / night", img: "../IMAGES/nishatlahoreimg.jfif" },
-        { name: "Avari Lahore", price: "PKR 30,000 / night", img: "../IMAGES/awarilahoreimg.webp" }
-      ],
-      restaurants: [
-        { name: "Haveli Restaurant", detail: "Traditional Desi Food", img: "../IMAGES/hawalilahoreimg.jfif" },
-        { name: "Howdy Burgers", detail: "Gourmet Fast Food", img: "../IMAGES/howdylahoreimg.jfif" },
-        { name: "Monal Lahore ", detail: "Buffet & Continental", img: "../IMAGES/monallahoreimg.webp" }
-      ],
-      places: [
-        { name: "Badshahi Mosque", detail: "Mughal Architecture", img: "../IMAGES/badshahilahoreimg.jpg" },
-        { name: "Lahore Fort (Shahi Qila)", detail: "Historical Monument", img: "../IMAGES/shahilahoreimg.jpg" },
-        { name: "Shalimar Gardens", detail: "Mughal Garden Complex", img: "../IMAGES/shahlimarlahoreimg.webp" }
+        { name: "Badshahi Mosque", detail: "Mughal Architecture", img:  "../IMAGES/badshahi.jpg" },
+        { name: "Lahore Fort (Shahi Qila)", detail: "Historical Monument", img:  "../IMAGES/badshahi.jpg"  },
+        { name: "Shalimar Gardens", detail: "Mughal Garden Complex", img: "../IMAGES/shalimar.webp"  }
       ]
     }
     , {
@@ -54,7 +27,7 @@
       cityName: "Karachi",
       tagline: "Where the sea breeze meets the city that never sleeps",
       cardImg: "../IMAGES/Karachi-Pakistan.webp",
-      modalVideo: "",
+     modalVideo: "https://www.youtube.com/embed/H4DsT46XLSs?autoplay=1&mute=1",
       hotels: [
         { name: "Mövenpick Hotel Karachi", price: "PKR 35,000 / night", img: "../IMAGES/karachiimg.jpg" },
         { name: "Marriott Hotel Karachi", price: "PKR 28,000 / night", img: "../IMAGES/mariotkarachiimg.jpg" },
@@ -76,7 +49,7 @@
       cityName: "Islamabad",
       tagline: "Where the Margalla hills touch the calm, green horizons.",
       cardImg: "../IMAGES/islamabad.jfif",
-      modalVideo: "",
+    modalVideo: "https://www.youtube.com/embed/7_WuTK9fH9Y?autoplay=1&mute=1",
       hotels: [
         { name: "The Centaurus Suites", price: "PKR 35,000 / night", img: "../IMAGES/centerisl.jpg" },
         { name: "Best Western Premier", price: "PKR 28,000 / night", img: "../IMAGES/premierisb.jfif" },
@@ -98,7 +71,7 @@
       cityName: "Swat",
       tagline: "Where the emerald Swat river meets the snow-capped Swiss of the East.",
       cardImg: "../IMAGES/Sawat.jfif",
-      modalVideo: "",
+   modalVideo: "https://www.youtube.com/embed/OLOdHK7prwg?autoplay=1&mute=1",
       hotels: [
       { name: "Swat Serena Hotel", price: "PKR 28,000 / night", img: "../IMAGES/swathotel.webp" },
       { name: "Burj Al Swat", price: "PKR 18,000 / night" ,  img: "../IMAGES/alburjswat.jpg"  },
@@ -110,8 +83,8 @@
       { name: "Shinwari Karahi", detail: "Authentic Pashtun Shinwari mutton & chapli kebabs" , img: "../IMAGES/shinvariswat.jfif" }
       ],
      places: [
-        { name: "Swat Museum", detail: "Mughal Architecture", img: "../IMAGES/badshahi.jpg"  , img: "../IMAGES/swatmueseum.jpg" },
-        { name: "White Palace Marghazar", detail: "Historical Monument", img: "../IMAGES/shahi-qila.jpg",  img: "../IMAGES/palaceswat.jfif"  },
+        { name: "Swat Museum", detail: "Mughal Architecture"  , img: "../IMAGES/swatmueseum.jpg" },
+        { name: "White Palace Marghazar", detail: "Historical Monument",   img: "../IMAGES/palaceswat.jfif"  },
         { name: "Amluk Dara Stupa", detail: "Ancient 3rd-century Gandharan Buddhist stupa", img: "../IMAGES/anukswat.jfif"  }
       ],
     },
@@ -121,7 +94,7 @@
       cityName: "Muree",
       tagline: "Where pine-covered misty peaks meet British-era colonial charm.",
       cardImg: "../IMAGES/Muree.jpg",
-      modalVideo: "",
+      modalVideo: "https://www.youtube.com/embed/oHtrv__F_-A?autoplay=1&mute=1",
       hotels: [
         { name: "PC Hotel Bhurban", price: "PKR 45,000 / night" , img: "../IMAGES/pcmuree.webp"},
         { name: "Cecil Hotel Murree", price: "PKR 35,000 / night" , img: "../IMAGES/cecilmuree.jpg"},
@@ -143,7 +116,7 @@
       cityName: "Hunza Valley",
       tagline: "Where majestic Karakoram peaks frame serene alpine lakes and timeless",
       cardImg: "../IMAGES/Hunza.jpg",
-      modalVideo: "",
+    modalVideo: "https://www.youtube.com/embed/S6vs03mk9is?autoplay=1&mute=1",
     hotels: [
        { name: "Faletti's Hotel ", price: "PKR 35,000 / night" , img: "../IMAGES/fallatehunza.jpg"},
        { name: "The Nishat Hotel", price: "PKR 40,000 / night" , img: "../IMAGES/nishathunza.jpg"},
@@ -165,7 +138,7 @@
       cityName: "Skardu",
       tagline: "Where desert dunes meet turquoise lakes under giant peaks.",
       cardImg: "../IMAGES/Skardu.jfif",
-      modalVideo: "",
+     modalVideo: "https://www.youtube.com/embed/qzoNSrbuhK8?autoplay=1&mute=1",
       hotels: [
         { name: "Serena Shigar Fort", price: "PKR 45,000 / night" , img: "../IMAGES/shigarskardu.jfif"},
         { name: "Shangrila Resort", price: "PKR 38,000 / night" , img: "../IMAGES/shangrilaskardu.jpg"},
@@ -187,7 +160,7 @@
       cityName: "Chitral",
       tagline: "Where ancient Kalash traditions meet the towering Hindu Kush peaks.",
       cardImg: "../IMAGES/Chitral.jpg",
-      modalVideo: "",
+      modalVideo: "https://www.youtube.com/embed/rE_5CivuG8Y?autoplay=1&mute=1",
       hotels: [
         { name: "Bejaan Resorts Chitral", price: "PKR 45,000 / night", img: "../IMAGES/bejaanchitral.jfif" },
         { name: "Gahirat Castle Chitral", price: "PKR 25,000 / night" , img: "../IMAGES/gahiratchitral.jfif"},
@@ -209,7 +182,7 @@
       cityName: "Naran",
       tagline: "Where glacial alpine lakes meet roaring river valleys and majestic mountain passes",
       cardImg: "../IMAGES/Naran.jpg",
-      modalVideo: "",
+    modalVideo: "https://www.youtube.com/embed/gzjWdExNLbc?autoplay=1&mute=1",
       hotels: [
         { name: "The Sarai Hotel & Resort", price: "PKR 35,000 / night" , img: "../IMAGES/sarainaran.jpg"},
         { name: "Mount Feast Hotel Naran", price: "PKR 25,000 / night" , img: "../IMAGES/mountnaran.jpg"},
@@ -231,7 +204,7 @@
       cityName: "Peshawar",
       tagline: "Where ancient Silk Road heritage meets legendary Pashtun hospitality.",
       cardImg: "../IMAGES/Peshawar.jpg",
-      modalVideo: "",
+     modalVideo: "https://www.youtube.com/embed/XPzJaLZxtwk?autoplay=1&mute=1",
      hotels: [
        { name: "Peshawar Serena Hotel", price: "PKR 45,000 / night" , img: "../IMAGES/serenapesh.jpg"},
        { name: "Shelton House Peshawar", price: "PKR 22,000 / night", img: "../IMAGES/sheltonpesh.jpg" },
@@ -253,7 +226,7 @@
       cityName: "Azad Kashmir ",
       tagline: "Where emerald rivers and pine-covered valleys cradle pristine alpine beauty.",
       cardImg: "../IMAGES/Azadkashmir.jpg",
-      modalVideo: "",
+     modalVideo: "https://www.youtube.com/embed/ClhOWQsWxQU?autoplay=1&mute=1",
      hotels: [
         { name: "Pearl Continental Muzaffarabad", price: "PKR 42,000 / night" , img: "../IMAGES/pckashmir.jpg"},
         { name: "Shangrila Resort Sharda", price: "PKR 18,000 / night" , img: "../IMAGES/shangrilakashmir.jpg"},
@@ -275,7 +248,7 @@
       cityName: "Quetta",
       tagline: "Where high-altitude fruit orchards meet dry rugged peaks and rich Balochi tradition.",
       cardImg: "../IMAGES/Queeta.jpg",
-      modalVideo: "",
+   modalVideo: "https://www.youtube.com/embed/QmkA230T45M?autoplay=1&mute=1",
       hotels: [
         { name: "Quetta Serena Hotel", price: "PKR 40,000 / night" , img: "../IMAGES/serenaquetta.jpg" },
         { name: "Hotel Bloom Star", price: "PKR 15,000 / night" , img: "../IMAGES/bloomquetta.jpg"},
@@ -291,8 +264,4 @@
        { name: "Quetta Archaeological Museum", detail: "Museum holding ancient regional artifacts & Bronze Age tools" , img: "../IMAGES/mueseumquetta.jfif"},
        { name: "Miri Fort", detail: "Ancient historic citadel perched on a high mound overlooking the city" , img: "../IMAGES/miriquetta.jfif"}
 ]
-}]
-    
-
-    
->>>>>>> 819e12194952c3a55f4462a727b1b755fb9b820d
+     }]

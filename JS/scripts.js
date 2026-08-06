@@ -12,11 +12,13 @@ $(document).ready(function () {
   $(".menu-btn").click(function () {
     $(this).toggleClass("active");
     $(".nav-links").toggleClass("show");
+    // $("body").toggleClass("menu-open");
   });
 
   $(".nav-links a").click(function () {
     $(".nav-links").removeClass("show");
     $(".menu-btn").removeClass("active");
+    // $("body").removeClass("menu-open");
   });
 
 
@@ -177,39 +179,8 @@ $(document).ready(function () {
       $('.error-msg').empty();
     });
 
-  } 
-
-
-<<<<<<< HEAD
-  //  EXPLORE PAGE 
-  // const citiesData = [
-  //   {
-  //     id: 1,
-  //     cityName: "Lahore",
-  //     tagline: "The Heart of Culture & Cuisine",
-  //     cardImg: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png",
-  //     modalImg: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png",
-  //     hotels: [
-  //       { name: "Pearl Continental (PC)", price: "PKR 35,000 / night", img: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png" },
-  //       { name: "Nishat Hotel Johar Town", price: "PKR 28,000 / night", img: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png" },
-  //       { name: "Avari Lahore", price: "PKR 30,000 / night", img: "https://www.theproviders.tech/storage/app/public/images/VOPR60wgwThgEw1MfRhGUohIgRGz0rCi6JELFmhT.png" }
-  //     ],
-  //     restaurants: [
-  //       { name: "Haveli Restaurant", detail: "Traditional Desi Food", img: "../IMAGES/haveli.jpg" },
-  //       { name: "Howdy Burgers", detail: "Gourmet Fast Food", img: "../IMAGES/howdy.jpg" },
-  //       { name: "Monal Lahore", detail: "Buffet & Continental", img: "../IMAGES/monal.jpg" }
-  //     ],
-  //     places: [
-  //       { name: "Badshahi Mosque", detail: "Mughal Architecture", img: "../IMAGES/badshahi.jpg" },
-  //       { name: "Lahore Fort (Shahi Qila)", detail: "Historical Monument", img: "../IMAGES/shahi-qila.jpg" },
-  //       { name: "Shalimar Gardens", detail: "Mughal Garden Complex", img: "../IMAGES/shalimar.jpg" }
-  //     ]
-  //   }
-  // ];
-=======
-// EXPLORE PAGE 
+  }  
 const cardsGrid = $('#cardsGrid');
->>>>>>> 819e12194952c3a55f4462a727b1b755fb9b820d
 
 if (cardsGrid.length) {
   $.each(citiesData, function (index, city) {
@@ -229,22 +200,6 @@ if (cardsGrid.length) {
   });
 }
 
-<<<<<<< HEAD
-  if (cardsGrid.length) {
-    $.each(citiesData, function (index, city) {
-      const cardHtml = `
-        <div class="city-card" >
-              <img src="${city.cardImg}" alt="${city.cityName}">    
-    
-     
-          <div class="city-card-info">
-            <h3>${city.cityName}</h3>
-            <p>${city.tagline}</p>
-            <button type="button" class="btn btn-primary view-details-btn" data-id="${city.id}">
-              View Details
-            </button>
-          </div>
-=======
 // EXPLORE MODAL 
 const exploreModal = $('#detailModal');
 const modalBody = $('#modalBody');
@@ -265,63 +220,10 @@ $(document).on('click', '.view-details-btn', function () {
           </a>
           <h4>${item.name}</h4>
           <div class="price-tag">${item.price}</div>
->>>>>>> 819e12194952c3a55f4462a727b1b755fb9b820d
         </div>
       `;
     });
 
-<<<<<<< HEAD
-  // EXPLORE MODAL 
-  const exploreModal = $('#detailModal');
-  const modalBody = $('#modalBody');
-
-  $(document).on('click', '.view-details-btn', function () {
-    const cityId = $(this).data('id');
-    const selectedCity = citiesData.find(c => c.id === cityId);
-
-    if (selectedCity) {
-      let hotelsHtml = '';
-      $.each(selectedCity.hotels, function (i, item) {
-        hotelsHtml += `
-          <div class="modal-item-card">
-   <a href="${item.img}" data-fancybox="hotels" data-caption="${item.name}">
-        <img src="${item.img}" alt="${item.name}">
-      </a>
-
-            
-            <h4>${item.name}</h4>
-            <div class="price-tag">${item.price}</div>
-          </div>
-        `;
-      });
-
-      let restHtml = '';
-      $.each(selectedCity.restaurants, function (i, item) {
-        restHtml += `
-          <div class="modal-item-card">
-            <img src="${item.img}" alt="${item.name}">
-            <h4>${item.name}</h4>
-            <p>${item.detail}</p>
-          </div>
-        `;
-      });
-
-      let placesHtml = '';
-      $.each(selectedCity.places, function (i, item) {
-        placesHtml += `
-          <div class="modal-item-card">
-            <img src="${item.img}" alt="${item.name}">
-            <h4>${item.name}</h4>
-            <p>${item.detail}</p>
-          </div>
-        `;
-      });
-
-      const modalContent = `
-        <div class="modal-header-banner">
-          <h2>Explore ${selectedCity.cityName} With Us</h2>
-          <img src="${selectedCity.modalImg}" class="modal-banner-img" alt="${selectedCity.cityName}">
-=======
     let restHtml = '';
     $.each(selectedCity.restaurants, function (i, item) {
       restHtml += `
@@ -331,7 +233,6 @@ $(document).on('click', '.view-details-btn', function () {
           </a>
           <h4>${item.name}</h4>
           <p>${item.detail}</p>
->>>>>>> 819e12194952c3a55f4462a727b1b755fb9b820d
         </div>
       `;
     });
@@ -389,22 +290,9 @@ exploreModal.on('click', function (e) {
   }
 });
 
-<<<<<<< HEAD
-  exploreModal.on('click', function (e) {
-    if ($(e.target).is(exploreModal)) {
-      exploreModal.removeClass('open');
-    }
-  });
-  Fancybox.bind("[data-fancybox]", {
-  // Your custom options
-});
-// explore end 
-
-=======
 // FANCYBOX INITIALIZATION
 Fancybox.bind("[data-fancybox]", {
 });
->>>>>>> 819e12194952c3a55f4462a727b1b755fb9b820d
 
 });
 

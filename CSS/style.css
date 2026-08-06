@@ -72,6 +72,7 @@ body{
         /*==========================
         NAVBAR
 ==========================*/
+
 .main-nav{
 position:fixed;
 top:0;
@@ -83,7 +84,7 @@ backdrop-filter:blur(15px);
 -webkit-backdrop-filter:blur(15px);
 box-shadow:0 10px 35px rgba(0,0,0,.15);
 z-index:999;
-    transition: var(--transition);
+transition: var(--transition);
 }
 .main-nav.scrolled{
 height:70px;
@@ -126,7 +127,7 @@ color:white;
 font-size:17px;
 font-weight:500;
 letter-spacing:.5px;
-    transition: var(--transition);
+transition: var(--transition);
 padding:10px 0;
 }
 .nav-links a::after{
@@ -138,7 +139,7 @@ width:0;
 height:3px;
 background:var(--gold);
 border-radius:20px;
-    transition: var(--transition);
+transition: var(--transition);
 }
 .nav-links a:hover{
 color:var(--gold);
@@ -163,37 +164,66 @@ width:28px;
 height:3px;
 background:white;
 border-radius:20px;
-transition: var(--transition);
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .menu-btn.active span:nth-child(1){
-transform:rotate(45deg) translateY(11px);
+transform:translateY(8px) rotate(45deg);
 }
 .menu-btn.active span:nth-child(2){
 opacity:0;
+transform:translateX(-10px);
 }
 .menu-btn.active span:nth-child(3){
-transform:rotate(-45deg) translateY(-11px);
+transform:translateY(-8px) rotate(-45deg);
 }
 @media(max-width:900px){
 .menu-btn{
 display:flex;
+z-index:1000;
 }
 .nav-links{
-position:fixed;
-top:80px;
+position:absolute;
+top:100%;
 right:-100%;
-width:280px;
-height:100vh;
+width:220px;
+max-width:75%;
+height:calc(100vh - 100%);
 background:var(--primary);
 flex-direction:column;
 align-items:center;
-padding-top:60px;
-transition:.5s;
-gap:30px;
+padding-top:40px;
+gap:20px;
+transition:right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+box-shadow:-10px 15px 30px rgba(0,0,0,.25);
+overflow-y:auto;
 }
 .nav-links.show{
 right:0;
 }
+.nav-links li{
+opacity:0;
+transform:translateY(20px);
+transition:opacity 0.3s ease, transform 0.3s ease;
+}
+.nav-links.show li{
+opacity:1;
+transform:translateY(0);
+}
+.nav-links.show li:nth-child(1){ transition-delay:0.15s; }
+.nav-links.show li:nth-child(2){ transition-delay:0.25s; }
+.nav-links.show li:nth-child(3){ transition-delay:0.35s; }
+.nav-links.show li:nth-child(4){ transition-delay:0.45s; }
+.nav-links.show li:nth-child(5){ transition-delay:0.55s; }
+.nav-links.show li:nth-child(6){ transition-delay:0.65s; }
+
+.nav-links:not(.show) li{
+transition-delay:0s !important;
+opacity:0;
+transform:translateY(15px);
+}
+}
+body.menu-open{
+overflow:hidden;
 }
 /* =============NAVBAR :END=========== */
 /*================ FOOTER ================*/
@@ -1890,48 +1920,23 @@ h3:hover{
     content:"−";
     color:var(--white);
 }
-<<<<<<< HEAD
 /* ===============CONTACT PAGE : START======= */
-=======
-
-
-
-
-
-/* contact page starts */
-
-
-:root {
-  --accent: #c89b3c;
-  --color-primary: #1f5747;
-  --text: #1f2937;
-  --bg: #faf9f6;
-  --white: #ffffff;
-  --error: #dc2626;
-}
-
 .contact-page{
   max-width: 780px;
   margin: 0  auto;
   padding: 60px 20px 80px;
 }
-
->>>>>>> 819e12194952c3a55f4462a727b1b755fb9b820d
 .contact-bg{
     background-image: url('IMAGES/bgimg1.avif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-<<<<<<< HEAD
      /* min-height: 100vh;  */
     /* width: 100%; */
-=======
->>>>>>> 819e12194952c3a55f4462a727b1b755fb9b820d
     margin: 0;
-   
+  
 }
-<<<<<<< HEAD
 .contact-page{
   max-width: 780px;
   margin: 0 auto 40px auto;
@@ -1939,11 +1944,6 @@ h3:hover{
   padding-bottom: 0;
  
 }
-=======
-
-
-
->>>>>>> 819e12194952c3a55f4462a727b1b755fb9b820d
 .form-header {
   text-align: center;
   margin-bottom: 40px;
@@ -1961,12 +1961,12 @@ h3:hover{
   font-family: 'Playfair Display', serif;
   font-size: 42px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--primary);
   margin-bottom: 10px;
 }
 .subtitle {
   font-size: 15px;
-  color: var(--color-primary);
+  color: var(--primary);
   opacity: 0.75;
 }
 /* Form card */
@@ -1995,7 +1995,7 @@ h3:hover{
 .field input,
 .field select {
   font-size: 14px;
-  color: var(--color-primary);
+  color: var(--primary);
   background-color: var(--bg);
   border: 1.5px solid rgba(31, 87, 71, 0.2);
   border-radius: 8px;
@@ -2038,9 +2038,9 @@ h3:hover{
   transform: translateY(2px); 
 }
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: var(--primary);
   color: var(--white);
-  border-color: var(--color-primary);
+  border-color: var(--primary);
 }
 .btn-primary:hover {
   background-color: var(--primary);
@@ -2049,11 +2049,11 @@ h3:hover{
 }
 .btn-secondary {
   background-color: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: var(--primary);
+  border-color: var(--primary);
 }
 .btn-secondary:hover {
-  background-color: var(--color-primary);
+  background-color: var(--primary);
   color: var(--white);
 }
 /* Modal CSS */
@@ -2100,13 +2100,6 @@ h3:hover{
     .preview-list li strong { 
       color: var(--gold); 
     }
-<<<<<<< HEAD
-     /* ======CONTACT PAGE : END ======= */
-   /* ========EXPLORE PAGE : START ===== */
-=======
-
-
-
     /* Calendar Section Styling */
 .calendar-section {
   background-color: var(--white);
@@ -2116,15 +2109,13 @@ h3:hover{
   margin-top: 40px;
   box-shadow: 0 10px 30px rgba(31, 87, 71, 0.06);
 }
-
 .calendar-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
-  color: var(--color-primary);
+  color: var(--primary);
   margin-bottom: 20px;
   text-align: center;
 }
-
 .calendar-container {
   position: relative;
   width: 100%;
@@ -2132,40 +2123,45 @@ h3:hover{
   overflow: hidden;
   border: 1.5px solid rgba(31, 87, 71, 0.2);
 }
-
 .calendar-container iframe {
   width: 100%;
   height: 450px;
   display: block;
 }
-
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
   .calendar-container iframe {
     height: 350px;
   }
-}
-     
-    /* contact end  */
+} 
+     /* ======CONTACT PAGE : END ======= */
 
-
-   /* EXPLORE START */
-  
->>>>>>> 819e12194952c3a55f4462a727b1b755fb9b820d
-.explore-header {
-    text-align: center;
-    padding: 50px 20px 20px;
+     /* ======EXPLORE PAGE : END ======= */
+.explore-header{
+    padding-top:30px;
 }
-.sub-heading {
-    color: var(--gold);
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-size: 14px;
+.explore-banner-wrapper{
+    width:100%;
+    height:auto;
+    overflow:hidden;
 }
-.explore-header h1 {
-    color: var(--color-primary);
-    font-size: 38px;
-    margin: 10px 0;
+.explore-banner-img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    animation: bannerMove 15s ease-in-out infinite alternate;
+}
+@keyframes bannerMove{
+    0%{
+        transform:scale(1) translateX(0);
+    }
+    100%{
+        transform:scale(1.08) translateX(-15px);
+    }
+}
+.explore-banner-wrapper:hover .explore-banner-img{
+    transform:scale(1.05);
+    filter:brightness(1.08);
 }
 .cards-grid {
     display: grid;
@@ -2201,7 +2197,7 @@ h3:hover{
     justify-content: space-between;
 }
 .city-card-info h3 {
-    color: var(--color-primary, #1f5747);
+    color: var(--primary, #1f5747);
     margin-bottom: 8px;
     font-size: 22px;
 }
@@ -2253,7 +2249,7 @@ h3:hover{
     margin-bottom: 25px;
 }
 .modal-header-banner h2 {
-    color: var(--color-primary);
+    color: var(--primary);
     font-size: 32px;
     margin-bottom: 15px;
 }
@@ -2266,7 +2262,7 @@ h3:hover{
 /* Modal Sections Grid */
 .modal-section-title {
     color: var(--gold);
-    border-bottom: 2px solid var(--color-primary, #1f5747);
+    border-bottom: 2px solid var(--primary, #1f5747);
     padding-bottom: 6px;
     margin: 30px 0 15px 0;
     font-size: 20px;
@@ -2296,7 +2292,7 @@ h3:hover{
     margin-bottom: 8px;
 }
 .modal-item-card h4 {
-    color: var(--color-primary, #1f5747);
+    color: var(--primary, #1f5747);
     margin-bottom: 4px;
     font-size: 15px;
 }
@@ -2310,10 +2306,7 @@ h3:hover{
     font-size: 13px;
     margin-top: 4px;
 }
-
-
 /* videos for modal in explore */
-
 .video-container {
   position: relative;
   width: 100%;
@@ -2323,7 +2316,6 @@ h3:hover{
   border-radius: 8px;
   overflow: hidden;
 }
-
 .video-container iframe {
   position: absolute;
   top: 0;
